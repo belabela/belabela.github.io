@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Website</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: larger;
+      margin: 0;
+      padding: 20px;
+      position: relative;
+      font-weight: 330;
+    }
+
+    h1 {
+      margin-top: 60px;
+      margin-bottom: 100px;
+      font-size: 30px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 480;
+    }
+
+    .profession {
+      text-align: center;
+      text-transform: uppercase;
+      color: black;
+      border: 0;
+      border-width: thin;
+      margin-left: 2pt;
+      padding: 5px;
+      display: inline-block;
+      font-size: 10pt;
+    }
+
+    .professiontop {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 3pt;
+    }
+
+    #professional {
+      font-size: larger;
+      font-weight: 400;
+    }
+
+    h2 {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    h3 {
+      font-weight: 500;
+      margin: 3px;
+      color: black;
+      font-variant: normal;
+      margin-left: 12px;
+      text-decoration: none;
+    }
+
+    h4 {
+      font-size: medium;
+      margin-left: 12px;
+      text-decoration: underline;
+    }
+
+    ul {
+      list-style: inherit;
+      margin-right: 0px;
+    }
+
+    ol {
+      font-size: medium;
+      list-style-type: decimal;
+      margin-right: 0px;
+    }
+
+    #other {
+      margin-left: 20px;
+      margin-top: 40px;
+      text-decoration: none;
+      font-weight: 380;
+      font-size: large;
+    }
+
+    p {
+      font-size: medium;
+      margin: 12px;
+      text-align: justify;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: white;
+      border: 1px solid black;
+      color: black;
+      text-decoration: none;
+      border-radius: 0px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .contact-btn:hover {
+      background-color: green;
+      color: white;
+    }
+
+    .contact-btn:active {
+      background-color: red;
+      color: white;
+    }
+
+    .profile {
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+
+    .profile img {
+      display: block;
+      margin: 0 auto;
+      border: 1px solid black;
+      width: 250px;
+      height: auto;
+      margin-bottom: 3px;
+    }
+
+    .profile figcaption {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-right: 0px;
+    }
+
+    .left-column,
+    .right-column {
+      width: 48%;
+      box-sizing: border-box;
+      margin-top: 50px;
+    }
+
+    .about_me {
+      font-size: large;
+      padding: 10px;
+      margin: 2px;
+    }
+
+    .databox {
+      font-size: medium;
+      border: thin solid black;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+
+    #contact {
+      width: 100%;
+      background-color: black;
+      padding: 15px;
+      margin-top: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    #Contacts {
+      margin-top: 60px;
+      text-decoration: underline;
+    }
+
+    #contact a {
+      display: inline-block;
+      padding: 8px 12px;
+      background-color: white;
+      color: black;
+      text-decoration: none;
+      border: 1px solid whitesmoke;
+      margin: 4px;
+      border-radius: 0px;
+    }
+
+    a {
+      text-decoration: none;
+      color: blue;
+      font-weight: 600;
+    }
+
+    .school-link:hover {
+      background-color: blue;
+      color: white;
+    }
+
+    .school-link:active {
+      background-color: red;
+      color: white;
+    }
+
+    #contact a:hover {
+      background-color: green;
+      color: white;
+    }
+
+    #contact a:active {
+      background-color: red;
+      color: white;
+    }
+
+    .contact {
+      color: black;
+      text-align: center;
+    }
+
+    .message-box {
+      width: 100%;
+      margin: 20px 0px;
+      padding: 20px;
+      border: 1px solid white;
+      background-color: black;
+      color: white;
+      box-sizing: border-box;
+    }
+
+    .message-box label {
+      display: block;
+      margin-top: 30px;
+      margin-bottom: 5px;
+    }
+
+    .message-box input,
+    .message-box textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .message-box button {
+      background-color: white;
+      color: black;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 0px;
+      cursor: pointer;
+      display: inline-block;
+      position: static;
+    }
+
+    .message-box button:active {
+      background-color: red;
+      color: white;
+    }
+
+    .message-box button:hover {
+      background-color: green;
+      color: white;
+    }
+
+    #sendme {
+      color: red;
+      margin-top: 70px;
+    }
+
+    .github-link:hover {
+      background-color: blue;
+      color: white;
+    }
+
+    .github-link:active {
+      background-color: red;
+      color: white;
+    }
+
+    .portfolio:hover {
+      background-color: blue;
+      color: white;
+    }
+
+    .portfolio:active {
+      background-color: red;
+      color: white;
+    }
+
+    .footer {
+      font-size: xx-small;
+    }
+
+    span {
+      background-color: yellow;
+      font-weight: 380;
+      font-size: medium;
+    }
+
+    #messageme {
+      background-color: #008cff;
+    }
+
+    #hire {
+      margin-bottom: 25px;
+      margin-left: 0px;
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+    margin-top: 20px;
+  }
+  }
+
+  .profitient {
+  background-color: transparent;
+  font-weight: 600;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="first-page">
+    <h1>Wellcome to my personal website</h1>
+
+    <a href="#contact" class="contact-btn">Contact Me</a>
+
+    <figure class="profile">
+      <img src="abel.jpg" alt="My photo">
+      <figcaption>Abel Demessie</figcaption>
+    </figure>
+
+    <div class="professiontop">
+      <h2 class="profession" id="professional">Accountant / Web Developer / Data Analyst</h2>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="left-column">
+      <div class="about_me">
+        <h3>About Me</h3>
+        <p>
+          My name is Abel Demessie, and I live in Addis Ababa, the capital of Ethiopia.
+          I am a first-degree graduate junior Accountant. I studied Accounting and Finance at
+          <a href="https://uu.edu.et/" target="_blank" class="school-link">Unity University</a>
+          in Gergi campus, where I developed a solid understanding of financial systems and business practices.
+          I have the foundational knowledge and understanding in accounting principles, accounting cycles,
+          debit and credit balance, bank reconciliation, chart of account, general ledger, income statement,
+          balance sheet, and cash flow statements.
+        </p>
+
+        <p>
+          After my graduation on Feb 28, 2025, I made research to build accounting software skills.
+          Finally, QuickBooks Online fit me because it offers training and badges free of charge,
+          so I immediately started learning in QuickBooks Online to gain hands-on practical experience.
+          Now I have finished ProAdvisor Level 1, Level 2, and bookkeeper training. During the training,
+          I successfully completed projects and did comprehensive practice. I am always learning and practicing,
+          and I am currently enrolled in a payroll course in QuickBooks Online.
+        </p>
+      </div>
+
+      <div class="about_me">
+        <h4 id="other">Additional Skills and Services</h4>
+
+        <ol>
+          <li>
+            <h3><span>Data Analysis</span></h3>
+            <p>
+              Alongside my background in accounting, I am developing my skills in data analysis. I have 
+              completed a sample data project using a structured dataset, where I practiced data cleaning, 
+              organization, and basic analysis to identify patterns and present clear insights.
+            </p>
+
+            <p>
+              I am comfortable using tools such as Microsoft Excel and Google Sheets to organize data, 
+              apply formulas, and present results in a simple and understandable way. I am continuously 
+              improving my ability to turn data into meaningful information that supports decision-making.
+            </p>
+
+          </li>
+
+          <li>
+            <h3><span>Web Development</span></h3>
+            <p>
+              While my academic background is in accounting, my interest in technology began after taking
+              a programming course. That experience sparked my curiosity and encouraged me to explore the
+              field further.
+            </p>
+
+            <p>
+              I am currently at the early stage of my web development journey, actively learning and
+              building my skills. As part of this journey, I developed this personal website as my first
+              self-initiated project. It serves as a platform to introduce myself, present my skills, and
+              showcase my work. While building this site, I applied my knowledge of HTML and CSS to create
+              a clean layout, organize content effectively, and implement basic styling. I am strongly
+              curious to add interactivity by applying JavaScript to my page and see how it can have more
+              interesting features. This project has given me valuable hands-on experience in structuring
+              webpages and understanding how front-end development works in practice.
+            </p>
+
+            <p>
+              I am eager to take on web development roles where I can contribute, learn, and grow.
+              I am open to opportunities that allow me to apply my current skills while gaining real-world
+              experience. I am committed to improving continuously, adapting to new challenges, and
+              delivering reliable and thoughtful work.
+            </p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="about_me">
+        <ul>
+          <li>
+            <h3>The kind of work environment I prefer</h3>
+            <p>I would prefer to work from home full time at the moment.</p>
+          </li>
+
+          <li>
+            <h3>Preferred work situation</h3>
+            <p>
+              If I get the opportunity to volunteer, I would like to volunteer for any company
+              or individual, but I am not limited to that.
+            </p>
+          </li>
+
+          <li>
+            <h3>Where do I want to work?</h3>
+            <p>
+              I am willing to work for a company or individual anywhere in the world,
+              regardless of location.
+            </p>
+          </li>
+
+          <li>
+            <h3>How long do I work?</h3>
+            <p>I work about 12 hours a day, Monday through Saturday.</p>
+          </li>
+
+          <li>
+            <h3>How much do I want to earn?</h3>
+            <p>
+              I am seeking $3 USD per hour or approximately $200 USD per month, though I am open to
+              negotiation depending on the scope of work. I am also willing to assist with volunteer or
+              trial setups to demonstrate my skills.
+            </p>
+          </li>
+
+          <li>
+            <h3>If work is not satisfactory</h3>
+            <p>
+              If the work does not meet expectations, I am committed to listening carefully to my client’s
+              feedback, promptly correcting any issues, and making the necessary improvements to ensure
+              satisfaction.
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="about_me">
+        <h3>My Goal</h3>
+        <p>
+          My goal is to provide honest, accurate, and reliable service while continuously improving and
+          building long-term relationships with clients.
+        </p>
+      </div>
+    </div>
+
+    <div class="right-column">
+      <h3 id="hire">Hire Me</h3>
+
+      <div class="databox">
+        <h3>As an Accountant</h3>
+        <p>
+          Supporting small bookkeeping tasks under clear instructions or supervision, including:
+        </p>
+        <ul>
+          <li>Accurate entry of business activities</li>
+          <li>Timely preparation and delivery of invoices and receipts</li>
+          <li>Efficient tracking of debts (A/P) and receivables (A/R) to maintain healthy cash flow</li>
+          <li>Matching records with bank statements (Bank Reconciliation)</li>
+          <li>Recording transactions and generating clear and reliable reports: Income Statement, Balance Sheet, and Cash Flow</li>
+        </ul>
+        <p>Proficient in <span class="profitient">QuickBooks Online</span></p>
+      </div>
+
+      <div class="databox">
+        <h3>As a Web Developer</h3>
+        <p>
+          This website is my first self-developed project, created to demonstrate my web development
+          skills and to showcase my training.
+
+        <p>
+          Through this project and my learning, I have developed the ability to:
+
+        </p>
+          
+        </p>
+        <ul>
+          <li>Build simple websites using HTML, CSS, and JavaScript</li>
+          <li>Create page structure and organize web content clearly</li>
+          <li>Style layouts, colors, fonts, and spacing with CSS</li>
+          <li>Add basic interactive features using JavaScript</li>
+          <li>Edit and improve existing front-end web pages</li>
+          <li>Create simple responsive pages that work better on different screen sizes</li>
+        </ul>
+
+        <p>
+          Proficient in <span class="profitient">VS code</span>
+
+        </p>
+
+      </div>
+
+      <div class="databox">
+        <h3>As a Data Analyst</h3>
+        <p>
+          I have completed a data analysis project using a sample dataset, which helped me
+          understand the full process from preparing the data to presenting the results.
+        </p>
+        <p>I worked on:</p>
+        <ul>
+          <li>Cleaning and organizing raw data (handling missing values, duplicates, and inconsistencies)</li>
+          <li>Performing basic data analysis to identify trends and simple insights</li>
+          <li>Using Microsoft Excel for data handling and analysis</li>
+          <li>Applying common functions such as SUM, AVERAGE, and COUNT</li>
+          <li>Creating simple tables and charts to present data clearly</li>
+        </ul>
+
+        <p>
+          Alongside this, I am also skilled in <span>data entry</span>, with a strong focus on accuracy,
+          consistency, and efficient handling of information. This experience has strengthened my 
+          analytical thinking and attention to detail, providing a solid foundation for data-related tasks.
+        </p>
+
+        <p>
+          Proficient in <span class="profitient">Microsoft Excel</span> & <span class="profitient">Google 
+            Spreadsheet</span>
+
+        </p>
+
+      </div>
+
+      <div class="databox">
+        <h3>My Work</h3>
+        <p>
+          You can see my first website projects on
+          <a href="https://www.github.com/belabela" target="_blank" class="github-link">GitHub</a>.
+          If you need to see my portfolio for my data analysis project, you can see
+          <a href="portfolio.html" target="_blank" class="portfolio">here</a>.
+        </p>
+      </div>
+
+      <div id="sendme">
+        <h3>Send Me a Message</h3>
+      </div>
+
+      <form class="message-box" action="https://formspree.io/f/mwvwvqdv" method="POST">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" cols="40" required></textarea>
+
+        <input type="hidden" name="_next" value="thankyou.html">
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <h3 class="contact" id="Contacts">Contact options</h3>
+  <div id="contact">
+    <a href="mailto:abel.d.gebeyehu@gmail.com">Email</a>
+    <a href="https://wa.me/251945184147" target="_blank">WhatsApp</a>
+    <a href="https://www.linkedin.com/in/accountant-qb" target="_blank">LinkedIn</a>
+    <a href="https://www.upwork.com/freelancers/~018ae6c61d355b585a?mp_source=share" target="_blank">Upwork</a>
+    <a href="https://www.fiverr.com/s/m5LExw8" target="_blank">Fiverr</a>
+    <a href="https://www.github.com/belabela" target="_blank">GitHub</a>
+  </div>
+
+  <footer class="footer">
+    <p>Developed by [Abel Demessie]. © 2026</p>
+  </footer>
+</body>
+</html>
